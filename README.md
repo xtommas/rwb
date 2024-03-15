@@ -7,7 +7,7 @@
 
 # 🤨 "But... why?"
 
-I Don't know, I'm not even a weeb.
+I don't know, I'm not even a weeb.
 
 # 🚀 Usage
 
