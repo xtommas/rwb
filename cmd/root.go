@@ -4,6 +4,7 @@ Copyright © 2024 Tomas
 package cmd
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/reujab/wallpaper"
@@ -26,6 +27,7 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			panic(err)
 		}
+		fmt.Println("Waifu set!")
 	},
 }
 
