@@ -6,7 +6,9 @@ package cmd
 import (
 	"os"
 
+	"github.com/reujab/wallpaper"
 	"github.com/spf13/cobra"
+	"github.com/xtommas/rwb/api"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -15,8 +17,15 @@ var rootCmd = &cobra.Command{
 	Short: "Get a random anime girl from Wallhaven and set it as the desktop background",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		// Logic for getting a random image
-		// and setting it as background
+		wallURL, err := api.GetRandomWall()
+		if err != nil {
+			panic(err)
+		}
+
+		err = wallpaper.SetFromURL(wallURL)
+		if err != nil {
+			panic(err)
+		}
 	},
 }
 
